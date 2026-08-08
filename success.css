@@ -1,0 +1,264 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Segoe UI', sans-serif;
+
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.success-container {
+
+    width: 100%;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.success-card {
+
+    background: white;
+
+    padding: 50px;
+
+    max-width: 600px;
+
+    width: 100%;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
+
+    animation: fadeIn .8s ease;
+
+}
+
+.check-circle {
+
+    width: 120px;
+
+    height: 120px;
+
+    background: #28a745;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+
+    margin-bottom: 25px;
+
+    animation: pop .8s;
+
+}
+
+.check-circle i {
+
+    font-size: 60px;
+
+    color: white;
+
+}
+
+.success-card h1 {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+
+    color: #222;
+
+}
+
+.success-card p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+}
+
+.order-box {
+
+    background: #f5f5f5;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+}
+
+.order-box h4 {
+
+    color: #777;
+
+}
+
+.order-box h2 {
+
+    color: #198754;
+
+    font-weight: 700;
+
+}
+
+.button-group {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.home-btn,
+.shop-btn {
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.home-btn {
+
+    background: #0d6efd;
+
+    color: white;
+
+}
+
+.shop-btn {
+
+    background: #198754;
+
+    color: white;
+
+}
+
+.home-btn:hover {
+
+    background: #084298;
+
+}
+
+.shop-btn:hover {
+
+    background: #146c43;
+
+}
+
+@keyframes pop {
+
+    0% {
+
+        transform: scale(.2);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .success-card {
+
+        padding: 30px 20px;
+
+    }
+
+    .success-card h1 {
+
+        font-size: 28px;
+
+    }
+
+    .check-circle {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+    .check-circle i {
+
+        font-size: 45px;
+
+    }
+
+}
