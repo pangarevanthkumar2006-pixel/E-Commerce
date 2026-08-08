@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-3" href="#">
+
+                <i class="bi bi-bag-fill text-warning"></i>
+
+                ShopEasy
+
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="#">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">
+
+                            Products
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">
+
+                            Categories
+
+                        </a>
+
+                    </li>
+
+                    <a href="cart.html" class="nav-link">
+
+                        🛒 Cart
+
+                        <span id="cartCount">
+                            0
+                        </span>
+
+                    </a>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">
+
+                            Contact
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-2">
+
+                        <a href="#" class="btn btn-warning">
+
+                            Login
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div id="loginError" class="alert alert-danger text-center d-none" role="alert">
+            Please Login or Register First!
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO SLIDER ================= -->
+    <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-bs-interval="3000"
+        data-bs-pause="false" data-bs-wrap="true" data-bs-touch="true">
+
+        <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000"
+            data-bs-pause="false">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+
+                <div class="carousel-item active">
+
+                    <img src="images/hero1.jpg" class="d-block w-100 hero-image">
+
+                    <div class="carousel-caption">
+
+                        <h1>Shop Smart, Live Better</h1>
+
+                        <p>
+
+                            Discover premium products at affordable prices.
+
+                        </p>
+
+
+                        <a href="javascript:void(0)" class="btn btn-warning btn-lg" onclick="checkLogin()">
+                            Shop Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 2 -->
+
+                <div class="carousel-item">
+
+                    <img src="images/hero2.jpg" class="d-block w-100 hero-image">
+
+                    <div class="carousel-caption">
+
+                        <h1>Mega Electronics Sale</h1>
+
+                        <p>
+
+                            Up to 50% OFF on laptops, mobiles & accessories.
+
+                        </p>
+
+
+                        <a href="javascript:void(0)" class="btn btn-warning btn-lg" onclick="checkLogin()">
+                            Explore Deals
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 3 -->
+
+                <div class="carousel-item">
+
+                    <img src="images/hero3.jpg" class="d-block w-100 hero-image">
+
+                    <div class="carousel-caption">
+
+                        <h1>Latest Fashion Collection</h1>
+
+                        <p>
+
+                            Trendy styles for every season.
+
+                        </p>
+
+                        <a href="javascript:void(0)" class="btn btn-warning btn-lg" onclick="checkLogin()">
+                            Shop Fashion
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Slide 4 -->
+
+                <div class="carousel-item">
+
+                    <img src="images/hero4.jpg" class="d-block w-100 hero-image">
+
+                    <div class="carousel-caption">
+
+                        <h1>Upgrade Your Lifestyle</h1>
+
+                        <p>
+
+                            Smart gadgets for smart people.
+
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-warning btn-lg" onclick="checkLogin()">
+                            Buy Now
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Slide 5 -->
+
+                <div class="carousel-item">
+
+                    <img src="images/hero5.jpg" class="d-block w-100 hero-image">
+
+                    <div class="carousel-caption">
+
+                        <h1>Premium Sports Shoes</h1>
+
+                        <p>
+
+                            Starting from ₹999
+
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-warning btn-lg" onclick="checkLogin()">
+                            View Collection
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        <!-- Bootstrap JS -->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/auth.js"></script>
+        <script src="./js/script.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+    padding: 15px 0;
+    transition: .4s;
+    z-index: 999;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 17px;
+    margin-left: 20px;
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.btn-warning {
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 28px;
+    transition: .4s;
+}
+
+.btn-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 193, 7, .4);
+}
+
+/* ===========================
+   HERO SLIDER
+=========================== */
+
+.carousel-item {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: 92vh;
+    object-fit: cover;
+}
+
+/* Dark Overlay */
+
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 2;
+    bottom: 22%;
+    text-align: left;
+    max-width: 650px;
+}
+
+.carousel-caption h1 {
+    font-size: 65px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    animation: fadeDown 1s;
+}
+
+.carousel-caption p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    animation: fadeUp 1s;
+}
+
+.carousel-caption .btn {
+    font-size: 18px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    animation: zoomIn 1s;
+}
+
+/* ===========================
+   CAROUSEL BUTTONS
+=========================== */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.carousel-indicators button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50%;
+    margin: 0 7px;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* ===========================
+   COMMON BUTTON
+=========================== */
+
+.btn {
+    transition: .4s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px) {
+
+    .hero-image {
+        height: 80vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 52px;
+    }
+
+}
+
+@media(max-width:992px) {
+
+    .hero-image {
+        height: 70vh;
+    }
+
+    .carousel-caption {
+        bottom: 18%;
+        max-width: 500px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 42px;
+    }
+
+    .carousel-caption p {
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .navbar-brand {
+        font-size: 25px;
+    }
+
+    .hero-image {
+        height: 60vh;
+    }
+
+    .carousel-caption {
+        bottom: 12%;
+        left: 8%;
+        right: 8%;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 34px;
+    }
+
+    .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .carousel-caption .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .hero-image {
+        height: 50vh;
+    }
+
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-caption .btn {
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+}
+
+.carousel-item {
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+}
+
+.carousel-fade .carousel-item.active {
+    opacity: 1;
+}

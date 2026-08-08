@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+        url("../images/hero3.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.login-box {
+
+    width: 420px;
+
+    background: rgba(20, 20, 20, .92);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffc107;
+
+    margin-bottom: 20px;
+}
+
+.logo i {
+
+    font-size: 40px;
+}
+
+.logo h2 {
+
+    color: white;
+
+    margin: 0;
+}
+
+h3 {
+
+    color: white;
+
+    margin-bottom: 10px;
+}
+
+p {
+
+    color: #ddd;
+}
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2c2c2c;
+
+    color: white;
+}
+
+input:focus {
+
+    outline: none;
+
+    border: 2px solid #ffc107;
+}
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 25px;
+
+    background: #ffc107;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    transition: .3s;
+}
+
+button:hover {
+
+    background: #ffb300;
+
+    transform: translateY(-2px);
+}
+
+.bottom {
+
+    margin-top: 20px;
+}
+
+.bottom a {
+
+    color: #ffc107;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.bottom a:hover {
+
+    text-decoration: underline;
+}
